@@ -18,10 +18,16 @@ function generateMarkdown(data) {
 ${data.description}  
 
 ## Installation
-
+${data.installation}
 
 ## Usage
+${data.usage}
 
+## Contribution Guidelines
+${data.contribution}
+
+## Testing Instructions
+${data.test}
 
 `;
 }
