@@ -7,7 +7,7 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = ["Enter project title.", "Enter a description for project."];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(data) {
     fs.writeFileSync(`${data.title}.md`, generateMarkdown(data))
 }
 
