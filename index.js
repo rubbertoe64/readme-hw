@@ -5,7 +5,14 @@ const { type } = require("os");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
-const questions = ["Enter project title.", "Enter a description for project.", "Enter installation instructions.","Enter Contribution Guidelines.","Enter Test Instructions."];
+const questions = [
+    "Enter project title.", 
+    "Enter a description for project.", 
+    "Enter installation instructions.", 
+    "How do you use this app?",
+    "Enter Contribution Guidelines.",
+    "Enter Test Instructions.", 
+    "Choose a license"];
 
 
 // TODO: Create a function to write README file
@@ -33,25 +40,36 @@ function init() {
                 message: questions[2],
             },
             {
-                type: "list",
-                name: "license",
-                message: "Enter a License",
-                choices: ['None', 'Apache', 'Boost', 'BSD 3-Clause', 'BSD 2-Clause'] 
-            },
-            {
                 type: "input",
                 name: "usage",
-                message: "How do you use this?"
+                message: questions[3],
             },
             {
                 type: "input",
                 name: "contribution",
-                message: "Enter Contribution Guidelines"
+                message: questions[4],
             },
             {
                 type: "input",
                 name: "test",
-                message: "Enter Testing Instructions"
+                message: questions[5],
+            },
+            {
+                type: "input",
+                name: "questionUsername",
+                message: "What is your Github Username?"
+
+            },
+            {
+                type: "input",
+                name: "questionEmail",
+                message: "What is your email?"
+            },
+            {
+                type: "list",
+                name: "license",
+                message: questions[6],
+                choices: ['Apache', 'Boost', 'BSD 3-Clause', 'BSD 2-Clause', 'None'] 
             },
         ])
     };
