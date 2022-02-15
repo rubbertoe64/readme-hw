@@ -2,7 +2,12 @@
 This is my submission for the README generator! This read me generator will ask for info needed to create a project readme and neatly place everything in the readme.
 
 Git hub repo: https://github.com/rubbertoe64/readme-hw~
+Sample of Readme is included in the files or click here: https://github.com/rubbertoe64/readme-hw/blob/main/Sample%20Generated%20Readme.md
 
+
+Image of app working in node.js! 
+
+![image of my node app](https://user-images.githubusercontent.com/71856810/154025808-b69dc5d7-02a7-4a14-97b8-65c8e37067f3.PNG)
 
 
 
