@@ -3,6 +3,7 @@ const inquirer =  require("inquirer");
 const fs = require("fs");
 const { type } = require("os");
 const generateMarkdown = require("./utils/generateMarkdown");
+
 // TODO: Create an array of questions for user input
 const questions = ["Enter project title.", "Enter a description for project.", "Enter installation instructions.","Enter Contribution Guidelines.","Enter Test Instructions."];
 
@@ -33,9 +34,9 @@ function init() {
             },
             {
                 type: "list",
-                name: "licence",
+                name: "license",
                 message: "Enter a License",
-                choices: ['Apache', 'Boost', 'BSD', 'BSD 2-Clause License'] 
+                choices: ['None', 'Apache', 'Boost', 'BSD 3-Clause', 'BSD 2-Clause'] 
             },
             {
                 type: "input",
