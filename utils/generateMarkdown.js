@@ -48,7 +48,7 @@ function renderLicenseSection(license) {
   if(license == "None"){
     return ``
   } else if( license != "None"){
-    return `## License:`
+    return `## License`
   }
 }
 
@@ -73,8 +73,9 @@ ${data.contribution}
 
 ## Testing Instructions
 ${data.test}
-${renderLicenseSection(data.license)} ${renderLicenseBadge(data.license)}
-${renderLicenseLink(data.license)}
+${renderLicenseSection(data.license)} 
+
+${renderLicenseLink(data.license)} ${renderLicenseBadge(data.license)}
 
 ## Questions
 Github Username: https://github.com/${data.questionUsername}
@@ -84,12 +85,20 @@ Email: ${data.questionEmail}
 }
 
 function addTableOfContents(data) {
-  return `[Description](#description)
+  return `[Description](#description) 
+
 [Installation](#installation)
+
 [Usage](#usage)
+
 [Contribution Guidelines](#contribution-guidelines)
+
 [Testing Instructions](#testing-instructions)
-${data.license != "None" ? "[License](#license)" : ""}`
+
+[License](#license)
+
+ [Questions](#questions)
+`
 };
 
 module.exports = generateMarkdown;
